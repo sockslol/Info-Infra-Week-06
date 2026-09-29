@@ -42,6 +42,7 @@ function runHitCalculation() {
 
     if (hitChance > 0.9) {
         document.getElementById("battleText").innerHTML = "The attack missed!"
+        console.log("Broke Boy missed")
 
     } else {
         document.getElementById("battleText").innerHTML = "The attack hit!"
