@@ -7,10 +7,6 @@ function setHPText() {
 }
 
 document.getElementById("attackButton").addEventListener("click", function() {
-    if (hp <= 0) {
-        document.getElementById("battleImg").src = "img/deadAmpharos.png"
-        return
-    }
 
     runHitCalculation()
     
