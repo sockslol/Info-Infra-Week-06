@@ -30,8 +30,8 @@ function updateHP() {
     }else{
         hp = 0
         document.getElementById("hpText").innerHTML = "HP: " + hp
-        document.getElementById("battleImg").src = "img/deadAmpharos.png"
         document.getElementById("attackButton").disabled = true;
+        animate()
         document.getElementById("battleText").innerHTML = "They're dead."
         console.log(hp)
     }
