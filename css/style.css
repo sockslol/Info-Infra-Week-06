@@ -1,29 +1,58 @@
 body {
-    margin: 0;
+  margin: 0;
+}
+
+.hpText {
+  margin-top: 5px;
+  font-weight: bolder;
+  font-size: 35px;
+}
+
+.damageText {
+  margin-bottom: 20px;
+  font-weight: lighter;
+  font-size: 25px;
 }
 
 .battleMenu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .battleImg {
-    margin: 10px;
-    height: 300px;
-    display: flex;
+  margin: 10px;
+  height: 400px;
+  display: flex;
 }
 
 .shake {
-    animation: shake 0.5s;
-    animation-iteration-count: 1;  
+  animation: shake 0.5s;
+  animation-iteration-count: 1;
 }
 
 @keyframes shake {
-    0% { transform: translateX(0); }
-    25% { transform: translateX(-10px); }
-    50% { transform: translateX(10px); }
-    75% { transform: translateX(-10px); }
-    100% { transform: translateX(0); }
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  75% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.attackButton {
+  width: 140px;
+  height: 30px;
+  font-size: large;
+  font-weight: normal;
 }

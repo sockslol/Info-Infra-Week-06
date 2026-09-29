@@ -6,6 +6,10 @@ function setHPText() {
     document.getElementById("hpText").innerHTML = "HP: " + hp
 }
 
+function setDamageText() {
+    document.getElementById("damageText").innerHTML = "-" + hpsub
+}
+
 document.getElementById("attackButton").addEventListener("click", function() {
 
     runHitCalculation()
@@ -16,13 +20,16 @@ function updateHP() {
     document.getElementById("hpText").innerHTML = "HP: " + hp
 
     if (hp > 0) {
-        hp -= Math.floor(Math.random() * 20) + 5;
+        hpsub = Math.floor(Math.random() * 20) + 5;
+        hp -= hpsub
     }
     
     if (hp > 0) {
         setHPText()
         animate()
         console.log(hp)
+        console.log(hpsub)
+        setDamageText()
     }else{
         hp = 0
         document.getElementById("hpText").innerHTML = "HP: " + hp
