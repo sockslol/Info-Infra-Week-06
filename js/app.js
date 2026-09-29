@@ -31,7 +31,8 @@ function updateHP() {
         hp = 0
         document.getElementById("hpText").innerHTML = "HP: " + hp
         document.getElementById("battleImg").src = "img/deadAmpharos.png"
-
+        document.getElementById("attackButton").disabled = true;
+        document.getElementById("battleText").innerHTML = "They're dead."
         console.log(hp)
     }
 }
@@ -52,12 +53,14 @@ function runHitCalculation() {
 function animate() {
     document.getElementById("battleImg").classList.add("shake")
     document.getElementById("battleImg").src = "img/hurtAmpharos.png"
+    document.getElementById("attackButton").disabled = true;
 }
 
 document.getElementById("battleImg").addEventListener('animationend', () => {
     document.getElementById("battleImg").classList.remove('shake');
     if (hp > 0) {
         document.getElementById("battleImg").src = "img/Ampharos.png"
+        document.getElementById("attackButton").disabled = false;
     }
     else {
         document.getElementById("battleImg").src = "img/deadAmpharos.png"
